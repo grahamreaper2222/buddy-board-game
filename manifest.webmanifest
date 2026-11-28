@@ -1,0 +1,20 @@
+{
+  "name": "Buddy and Twilight’s Battle Race",
+  "short_name": "Buddy Board Game",
+  "description": "A colourful multiplayer board game starring Buddy, Twilight and their friends.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#0a0f1e",
+  "theme_color": "#101a31",
+  "icons": [
+    {
+      "src": "./buddy-board-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
