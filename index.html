@@ -1,4 +1,9 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Buddy and Twilight’s Battle Race — Xbox Optimised</title><meta name="color-scheme" content="dark"><meta name="description" content="Buddy and Twilight’s Battle Race — Adventure Edition"><meta name="theme-color" content="#101a31">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./buddy-board-icon.svg" type="image/svg+xml">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <style>
 :root{--bg:#0a0f1e;--panel:#111a33;--ink:#fff;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 html,body{height:100%;margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,sans-serif;-webkit-tap-highlight-color:transparent}
@@ -446,4 +451,5 @@ function gamepadFrame(){try{const pads=navigator.getGamepads?navigator.getGamepa
 window.addEventListener('gamepadconnected',()=>{say('🎮 Controller connected! Use the D-pad, A and B. Menu opens the game menu.');});
 window.addEventListener('gamepaddisconnected',()=>{padPrev=[];});
 requestAnimationFrame(gamepadFrame);setup();
+if ("serviceWorker" in navigator) { window.addEventListener("load", () => navigator.serviceWorker.register("./service-worker.js").catch(err => console.warn("PWA service worker registration failed:", err))); }
 </script></body></html>
